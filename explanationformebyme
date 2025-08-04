@@ -1,0 +1,50 @@
+i made this task manager to help me understand and improve in springboot
+
+This is a CRUD application.
+CRUD basically means
+Create
+Read
+Update
+Delete
+
+the process is as follow -
+first there is a main application which is used to run the project, we dont interfere with that
+2. in the next step we make 3 folders named
+    a. controller
+    b. entity
+    c. repo
+    d. service
+
+The logic behind these 4 folders are as follows
+1. controller is a dumb thing which only handles api requests and dont contain anything else
+2. entity is a place were we have defined what all datapoints we need. id, description, title
+3. repo is the file in which we have extended the repositery to mongo dbs repositery because we need to use certain things which are in that repo
+4. service is the business logic of the app where everything has been setup, what will happen how it will happen
+
+spring.application.name=Task-Manager // basically name of the file
+spring.data.mongodb.database=taskmanagerdb // we are telling mongo db that this is the db we are using and if it isnt there make it
+spring.data.mongodb.port=27017 // we are telling mongo that this is the port we will use in mongo
+spring.data.mongodb.host=localhost // same, telling mongo this will be the host
+server.port=8080 // port we will be using on client side
+
+details about all the words using @
+
+@Restcontroller -  it defines that this particular file is api gateway
+@Autowired - used for dependency injection - calling data from service layer or wherever that is stored
+@Requestmapping("xyz") - this will be the endpoint depicting that you need to type8080/xyz before typing anyting more
+@Service - special type of component made for business layer
+@Getmapping - used to fetch/get data from server
+@Postmapping - used to post data to the server
+@Putmapping -  used to update data to the server
+@Deletemapping - used to delete data from the server
+@Data -  used to inject lombok dependencies, you get getter setter and few other things
+@ID - used to define that this particular data is ID of the project
+
+return types
+
+public void -  dont return anything just do the work
+public (file name) do something and returns that file
+public optional - it isnt necessary that data is present if present do (whatever is mentioned later in the logic)
+public List<> - pull out data of this mentioned list
+
+also, healthcheck in controller is used to check basically that server is working fine and issue is present in business logic or something else
