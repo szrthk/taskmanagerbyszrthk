@@ -27,24 +27,30 @@ A fully functional **Spring Boot CRUD Application** for managing tasks, built fr
 
 ## 📂 Project Structure
 taskmanagerbyszrthk/
-├── src/
-│   └── main/
-│       ├── java/
-│       │   └── com.szrthk.taskmanager/
-│       │       ├── controller/
-│       │       │   └── TaskController.java
-│       │       ├── entity/
-│       │       │   └── Task.java
-│       │       ├── service/
-│       │       │   └── TaskService.java
-│       │       ├── repo/
-│       │       │   └── TaskRepo.java
-│       │       └── TaskmanagerbyszrthkApplication.java
-│       └── resources/
-│           ├── application.properties
-├── pom.xml
-├── README.md
-└── .gitignore
+* ├── src/
+* │   └── main/
+* │       └── java/
+* │           └── com/
+* │               └── szrthk/
+* │                   └── taskmanager/
+* │                       ├── controller/
+* │                       │   └── TaskController.java
+* │                       ├── entity/
+* │                       │   └── Task.java
+* │                       ├── service/
+* │                       │   └── TaskService.java
+* │                       ├── repo/
+* │                       │   └── TaskRepo.java
+* │                       └── TaskmanagerbyszrthkApplication.java
+* │
+* │   └── resources/
+* │       ├── application.properties
+* │       ├── static/
+* │       └── templates/
+* │
+* ├── pom.xml
+* ├── README.md
+* └── .gitignore
 ---
 
 ## 🧑‍💻 How to Run Locally
