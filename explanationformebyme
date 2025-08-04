@@ -16,10 +16,10 @@ first there is a main application which is used to run the project, we dont inte
     d. service
 
 The logic behind these 4 folders are as follows
-1. controller is a dumb thing which only handles api requests and dont contain anything else
+1. Controller’s job is to handle API requests and route them to the Service Layer. It should not contain business logic this keeps code modular and clean.
 2. entity is a place were we have defined what all datapoints we need. id, description, title
-3. repo is the file in which we have extended the repositery to mongo dbs repositery because we need to use certain things which are in that repo
-4. service is the business logic of the app where everything has been setup, what will happen how it will happen
+3. repo is the file where we connect our code to mongoDB, we get pre built methods like .save .f indall()
+4. service layer handles business logic and act as a middleman between controller and repositery
 
 spring.application.name=Task-Manager // basically name of the file
 spring.data.mongodb.database=taskmanagerdb // we are telling mongo db that this is the db we are using and if it isnt there make it
